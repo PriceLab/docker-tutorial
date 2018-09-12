@@ -1,0 +1,23 @@
+docker ps
+docker images
+cd .\Documents\GitHub\docker-tutorial\beginner-tutorial\code-encapsulation\
+ls
+docker build .
+docker images
+docker run 709f7acab5e0
+docker build .
+docker run 709f7acab5e0
+docker images
+docker build -t hello-world1 .
+docker run hello-world1
+docker login
+docker push hello-world1
+docker tag hello-world1 johncearls/hello-world1
+docker push johncearls/hello-world1
+docker run -it johncearls/hello-world1 /bin/bash
+docker run -it johncearls/hello-world1 bash
+docker run -it johncearls/hello-world1 sh
+apk add --no-cache bash
+docker create awesome_kirch johncearls/hello-world2
+docker run -it johncearls/hello-world2 bash
+
