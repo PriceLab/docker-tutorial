@@ -1,5 +1,6 @@
 #copy and paste this to powershell
 
 #docker
-docker run --rm -p 80:8888 -e JUPYTER_LAB_ENABLE=yes -v C:/Users/john/jupyter:/home/jovyan/work jupyter/datascience-notebook:e5c5a7d3e52d
-docker run -dit --name my-apache-app -p 8001:80 -v C:/Users/john:/usr/local/apache2/htdocs/ httpd:2.4
+docker run --rm --name jupyter-app -p 80:8888 -e JUPYTER_LAB_ENABLE=yes -v C:/Users/john/jupyter:/home/jovyan/work jupyter/datascience-notebook:e5c5a7d3e52d
+docker run -dit --name apache-app -p 8001:80 -v C:/Users/john:/usr/local/apache2/htdocs/ httpd:2.4
+docker run --rm --name shiny-app -p 8002:3838 rocker/shiny
